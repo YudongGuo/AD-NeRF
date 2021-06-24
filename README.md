@@ -16,7 +16,7 @@ conda activate adnerf
 
     Put "01_MorphableModel.mat" to data_util/face_tracking/3DMM/; cd data_util/face_tracking; run
     ```
-    python convert_3dmm.py
+    python convert_BFM.py
     ```
 ## Train AD-NeRF
 - Data Preprocess ($id Obama for example)
