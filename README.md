@@ -45,11 +45,11 @@ PyTorch implementation for paper "AD-NeRF: Audio Driven Neural Radiance Fields f
 ## Run AD-NeRF for rendering
 - Reconstruct original video with audio input
     ```
-    python NeRFs/TorsoNeRF/run_nerf.py --config dataset/$id/TorsoNeRFTest_config.txt --audfile=dataset/$id/aud.npy --test_size=300
+    python NeRFs/TorsoNeRF/run_nerf.py --config dataset/$id/TorsoNeRFTest_config.txt --aud_file=dataset/$id/aud.npy --test_size=300
     ```
 - Drive the target person with another audio input
     ```
-    python NeRFs/TorsoNeRF/run_nerf.py --config dataset/$id/TorsoNeRFTest_config.txt --audfile=${deepspeechfile.npy} --test_size=-1
+    python NeRFs/TorsoNeRF/run_nerf.py --config dataset/$id/TorsoNeRFTest_config.txt --aud_file=${deepspeechfile.npy} --test_size=-1
     ```
 
 ## Acknowledgments
