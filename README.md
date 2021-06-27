@@ -3,7 +3,7 @@
 ### | [Project Page](https://yudongguo.github.io/ADNeRF/) | [Paper](https://arxiv.org/abs/2103.11078) | 
 ![](paper_data/pipeline.png)
 
-PyTorch implementation for paper "AD-NeRF: Audio Driven Neural Radiance Fields for Talking Head Synthesis"
+PyTorch implementation for the paper "AD-NeRF: Audio Driven Neural Radiance Fields for Talking Head Synthesis"
 
 ## Prerequisites
 - You can create an anaconda environment called adnerf with:
@@ -32,7 +32,7 @@ PyTorch implementation for paper "AD-NeRF: Audio Driven Neural Radiance Fields f
     - Input: A portrait video at 25fps containing voice audio. (dataset/vids/$id.mp4)
     - Output: folder dataset/$id that contains all files for training
 
-- Traing Two NeRFs (Head-NeRF and Torso-NeRF)
+- Train Two NeRFs (Head-NeRF and Torso-NeRF)
     - Train Head-NeRF with command 
         ```
         python NeRFs/HeadNeRF/run_nerf.py --config dataset/$id/HeadNeRF_config.txt
