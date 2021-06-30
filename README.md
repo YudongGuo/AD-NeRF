@@ -42,6 +42,7 @@ PyTorch implementation for the paper "AD-NeRF: Audio Driven Neural Radiance Fiel
         ```
         python NeRFs/TorsoNeRF/run_nerf.py --config dataset/$id/TorsoNeRF_config.txt
         ```
+    - You may need the pretrained models (in pretrained_models/) to avoid bad initialization. ([Issue 3](https://github.com/YudongGuo/AD-NeRF/issues/3))
 ## Run AD-NeRF for rendering
 - Reconstruct original video with audio input
     ```
