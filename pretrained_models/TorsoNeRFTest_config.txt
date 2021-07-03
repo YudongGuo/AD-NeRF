@@ -1,6 +1,6 @@
 expname = Obama_com
-datadir = /data1/yudong/github/ADNeRF-github/dataset/Obama
-basedir = /data1/yudong/github/ADNeRF-github/dataset/Obama/logs
+datadir = dataset/Obama
+basedir = dataset/Obama/logs
 near = 0.7047980308532715
 far = 1.3047980308532714
 with_test = 1
