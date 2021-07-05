@@ -538,7 +538,7 @@ def config_parser():
                         help='do not reload weights from saved ckpt')
     parser.add_argument("--ft_path", type=str, default=None,
                         help='specific weights npy file to reload for coarse network')
-    parser.add_argument("--N_iters", type=int, default=300000,
+    parser.add_argument("--N_iters", type=int, default=400000,
                         help='number of iterations')
 
     # rendering options
