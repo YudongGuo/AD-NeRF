@@ -202,7 +202,7 @@ if running_step == 6:
     pose = torch.eye(4, dtype=torch.float32)
     save_ids = ['train', 'val']
     train_val_ids = [train_ids, val_ids]
-    mean_z = float(torch.mean(trans_inv[:, 2, 0]).item())
+    mean_z = -float(torch.mean(trans[:, 2]).item())
     for i in range(2):
         transform_dict = dict()
         transform_dict['focal_len'] = float(focal_len[0])
