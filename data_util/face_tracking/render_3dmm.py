@@ -99,7 +99,7 @@ class Render_3DMM(nn.Module):
         vert_2 = torch.index_select(geometry, 1, self.tris[:, 1])
         vert_3 = torch.index_select(geometry, 1, self.tris[:, 2])
         nnorm = torch.cross(vert_2-vert_1, vert_3-vert_1, 2)
-        tri_normal = nn.functional.normalize(nnorm)
+        tri_normal = nn.functional.normalize(nnorm, dim=2)
         v_norm = tri_normal[:, self.vert_tris, :].sum(2)
         vert_normal = v_norm / v_norm.norm(dim=2).unsqueeze(2)
         return vert_normal
