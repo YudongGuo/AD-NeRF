@@ -88,7 +88,7 @@ if running_step == 1:
     cap.release()
     exit()
 
-# Step 2: detect lands & estimate head pose
+# Step 2: detect lands
 if running_step == 2:
     print('--- Step 2: detect landmarks ---')
     fa = face_alignment.FaceAlignment(
@@ -110,13 +110,7 @@ valid_img_num = len(valid_img_ids)
 tmp_img = cv2.imread(os.path.join(ori_imgs_dir, str(valid_img_ids[0])+'.jpg'))
 h, w = tmp_img.shape[0], tmp_img.shape[1]
 
-if running_step == 2:
-    print('--- Estimate Head Pose ---')
-    est_pose_cmd = 'python data_util/face_tracking/face_tracker.py --idname=' + \
-        id + ' --img_h=' + str(h) + ' --img_w=' + str(w) + \
-        ' --frame_num=' + str(max_frame_num)
-    os.system(est_pose_cmd)
-    exit()
+
 
 # Step 3: face parsing
 if running_step == 3:
@@ -184,9 +178,17 @@ if running_step == 5:
         img[~head_part] = bc_img[~head_part]
         cv2.imwrite(os.path.join(head_imgs_dir, str(i) + '.jpg'), img)
 
-
-# Step 6: save transform param & write config file
+# Step 6: estimate head pose
 if running_step == 6:
+    print('--- Estimate Head Pose ---')
+    est_pose_cmd = 'python data_util/face_tracking/face_tracker.py --idname=' + \
+        id + ' --img_h=' + str(h) + ' --img_w=' + str(w) + \
+        ' --frame_num=' + str(max_frame_num)
+    os.system(est_pose_cmd)
+    exit()
+
+# Step 7: save transform param & write config file
+if running_step == 7:
     print('--- Step 6: Save Transform Param ---')
     params_dict = torch.load(os.path.join(id_dir, 'track_params.pt'))
     focal_len = params_dict['focal']
