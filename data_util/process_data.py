@@ -189,7 +189,7 @@ if running_step == 6:
 
 # Step 7: save transform param & write config file
 if running_step == 7:
-    print('--- Step 6: Save Transform Param ---')
+    print('--- Step 7: Save Transform Param ---')
     params_dict = torch.load(os.path.join(id_dir, 'track_params.pt'))
     focal_len = params_dict['focal']
     euler_angle = params_dict['euler']
