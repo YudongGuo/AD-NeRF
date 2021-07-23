@@ -1,9 +1,9 @@
 # AD-NeRF: Audio Driven Neural Radiance Fields for Talking Head Synthesis
 
-### | [Project Page](https://yudongguo.github.io/ADNeRF/) | [Paper](https://arxiv.org/abs/2103.11078) | 
 ![](paper_data/pipeline.png)
 
-PyTorch implementation for the paper "AD-NeRF: Audio Driven Neural Radiance Fields for Talking Head Synthesis"
+PyTorch implementation for the paper "[AD-NeRF: Audio Driven Neural Radiance Fields for Talking Head Synthesis (ICCV 2021)](https://arxiv.org/abs/2103.11078)".<br/>
+Authors: [Yudong Guo](https://yudongguo.github.io/), [Keyu Chen](http://kychern.github.io/), [Sen Liang](https://scholar.google.com/citations?user=Yv_olnAAAAAJ&hl), [Yong-Jin Liu](https://cg.cs.tsinghua.edu.cn/people/~Yongjin/Yongjin.htm), [Hujun Bao](http://www.cad.zju.edu.cn/home/bao/) and [Juyong Zhang](http://staff.ustc.edu.cn/~juyong/).
 
 ## Prerequisites
 - You can create an anaconda environment called adnerf with:
@@ -52,6 +52,21 @@ PyTorch implementation for the paper "AD-NeRF: Audio Driven Neural Radiance Fiel
     ```
     python NeRFs/TorsoNeRF/run_nerf.py --config dataset/$id/TorsoNeRFTest_config.txt --aud_file=${deepspeechfile.npy} --test_size=-1
     ```
+
+## Citation
+
+If you find our work useful in your research, please consider citing our paper:
+
+```
+@inproceedings{guo2021adnerf,
+  title={AD-NeRF: Audio Driven Neural Radiance Fields for Talking Head Synthesis},
+  author={Yudong Guo and Keyu Chen and Sen Liang and Yongjin Liu and Hujun Bao and Juyong Zhang},
+  booktitle={IEEE/CVF International Conference on Computer Vision (ICCV)},
+  year={2021}
+}
+```
+
+If you have questions, feel free to contact <gyd2011@mail.ustc.edu.cn>.
 
 ## Acknowledgments
 We use [face-parsing.PyTorch](https://github.com/zllrunning/face-parsing.PyTorch) for parsing head and torso maps, and [DeepSpeech](https://github.com/mozilla/DeepSpeech) for audio feature extraction. The NeRF model is implemented based on [NeRF-pytorch](https://github.com/yenchenlin/nerf-pytorch).
