@@ -589,7 +589,7 @@ def config_parser():
                         help='batch size (number of random rays per gradient step)')
     parser.add_argument("--lrate", type=float, default=5e-4,
                         help='learning rate')
-    parser.add_argument("--lrate_decay", type=int, default=500,
+    parser.add_argument("--lrate_decay", type=int, default=250,
                         help='exponential learning rate decay (in 1000 steps)')
     parser.add_argument("--chunk", type=int, default=1024,
                         help='number of rays processed in parallel, decrease if running out of memory')
@@ -1050,7 +1050,7 @@ def train():
         # NOTE: IMPORTANT!
         ###   update learning rate   ###
         decay_rate = 0.1
-        decay_steps = args.lrate_decay * 1500
+        decay_steps = args.lrate_decay * 1000
         new_lrate = args.lrate * (decay_rate ** (global_step / decay_steps))
         #print('cur_rate', new_lrate)
         for param_group in optimizer.param_groups:
