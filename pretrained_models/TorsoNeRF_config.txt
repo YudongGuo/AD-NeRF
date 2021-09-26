@@ -1,0 +1,6 @@
+expname = Obama_com
+datadir = dataset/Obama
+basedir = dataset/Obama/logs
+near = 0.5679027318954468
+far = 1.1679027318954467
+testskip = 104
