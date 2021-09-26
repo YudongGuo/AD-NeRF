@@ -607,7 +607,7 @@ def config_parser():
                         help="windows size of audio feature")
     parser.add_argument("--smo_size", type=int, default=8,
                         help="window size for smoothing audio features")
-    parser.add_argument('--nosmo_iters', type=int, default=300000,
+    parser.add_argument('--nosmo_iters', type=int, default=200000,
                         help='number of iterations befor applying smoothing on audio features')
 
     # llff flags
