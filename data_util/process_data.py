@@ -278,5 +278,6 @@ if running_step == 7:
         file.write('near = ' + str(mean_z-0.2) + '\n')
         file.write('far = ' + str(mean_z+0.4) + '\n')
         file.write('with_test = ' + str(1) + '\n')
+        file.write('test_pose_file = transforms_val.json' + '\n')
 
     print(id + ' data processed done!')
