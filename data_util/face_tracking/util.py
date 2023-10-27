@@ -33,8 +33,8 @@ def euler2rot(euler_angle):
         torch.cat((phi.sin(), zero, phi.cos()), 1),
     ), 2)
     rot_z = torch.cat((
-        torch.cat((psi.cos(), -psi.sin(), zero), 1),
-        torch.cat((psi.sin(), psi.cos(), zero), 1),
+        torch.cat((psi.cos(), psi.sin(), zero), 1),
+        torch.cat((-psi.sin(), psi.cos(), zero), 1),
         torch.cat((zero, zero, one), 1)
     ), 2)
     return torch.bmm(rot_x, torch.bmm(rot_y, rot_z))
